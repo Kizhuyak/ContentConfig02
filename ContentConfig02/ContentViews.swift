@@ -10,6 +10,11 @@ import UIKit
 class CompactCellView: UIView, UIContentView {
 
     @IBOutlet var containerView: UIView!
+    @IBOutlet var NameLabel: UILabel!
+    @IBOutlet var QuantityLabel: UILabel!
+    @IBOutlet var DateUpdatedLabel: UILabel!
+    
+    
     private var currentConfiguration: compactConfiguration!
     
     var configuration: UIContentConfiguration {
@@ -41,7 +46,8 @@ private extension CompactCellView {
     
     func loadNib() {
         
-        let compactCellView = Bundle.main.loadNibNamed("\(CompactCellView.self)", owner: self)
+//        let compactCellView = Bundle.main.loadNibNamed("\(CompactCellView.self)", owner: self)
+        Bundle.main.loadNibNamed("\(CompactCellView.self)", owner: self)
         addSubview(containerView)
         containerView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -55,6 +61,7 @@ private extension CompactCellView {
     func apply(configuration: compactConfiguration) {
         
         currentConfiguration = configuration
+        NameLabel.text = configuration.name
     }
 }
 

@@ -15,7 +15,7 @@
 		63031FE6299C7075002BCFEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63031FE4299C7075002BCFEF /* LaunchScreen.storyboard */; };
 		63031FEE299C709E002BCFEF /* CompactCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63031FED299C709E002BCFEF /* CompactCellView.xib */; };
 		63031FF0299C7BD8002BCFEF /* ContentConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63031FEF299C7BD8002BCFEF /* ContentConfigurations.swift */; };
-		63031FF2299C7ED5002BCFEF /* CellViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63031FF1299C7ED5002BCFEF /* CellViews.swift */; };
+		63031FF2299C7ED5002BCFEF /* ContentViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63031FF1299C7ED5002BCFEF /* ContentViews.swift */; };
 		63031FF4299DC266002BCFEF /* RegularCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63031FF3299DC266002BCFEF /* RegularCellView.xib */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		63031FE7299C7075002BCFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63031FED299C709E002BCFEF /* CompactCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompactCellView.xib; sourceTree = SOURCE_ROOT; };
 		63031FEF299C7BD8002BCFEF /* ContentConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentConfigurations.swift; sourceTree = "<group>"; };
-		63031FF1299C7ED5002BCFEF /* CellViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViews.swift; sourceTree = "<group>"; };
+		63031FF1299C7ED5002BCFEF /* ContentViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViews.swift; sourceTree = "<group>"; };
 		63031FF3299DC266002BCFEF /* RegularCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegularCellView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,7 +70,7 @@
 				63031FDB299C7072002BCFEF /* SceneDelegate.swift */,
 				63031FDD299C7072002BCFEF /* ViewController.swift */,
 				63031FEF299C7BD8002BCFEF /* ContentConfigurations.swift */,
-				63031FF1299C7ED5002BCFEF /* CellViews.swift */,
+				63031FF1299C7ED5002BCFEF /* ContentViews.swift */,
 				63031FDF299C7072002BCFEF /* Main.storyboard */,
 				63031FE2299C7075002BCFEF /* Assets.xcassets */,
 				63031FE4299C7075002BCFEF /* LaunchScreen.storyboard */,
@@ -153,7 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63031FF0299C7BD8002BCFEF /* ContentConfigurations.swift in Sources */,
-				63031FF2299C7ED5002BCFEF /* CellViews.swift in Sources */,
+				63031FF2299C7ED5002BCFEF /* ContentViews.swift in Sources */,
 				63031FDE299C7072002BCFEF /* ViewController.swift in Sources */,
 				63031FDA299C7072002BCFEF /* AppDelegate.swift in Sources */,
 				63031FDC299C7072002BCFEF /* SceneDelegate.swift in Sources */,
@@ -311,6 +311,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +340,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

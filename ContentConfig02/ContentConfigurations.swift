@@ -8,11 +8,14 @@
 import UIKit
 
 struct compactConfiguration: UIContentConfiguration, Hashable {
+    
+    var name: String?
+    
     func makeContentView() -> UIView & UIContentView {
         return CompactCellView(configuration: self)!
     }
     
-    func updated(for state: UIConfigurationState) -> Self {
+    func updated(for state: UIConfigurationState) -> compactConfiguration {
         guard let state = state as? UICellConfigurationState else { return self }
 
         var updatedConfig = self
@@ -29,7 +32,7 @@ struct regularConfiguration: UIContentConfiguration, Hashable {
         return RegularCellView(configuration: self)!
     }
     
-    func updated(for state: UIConfigurationState) -> Self {
+    func updated(for state: UIConfigurationState) -> regularConfiguration {
         guard let state = state as? UICellConfigurationState else { return self }
 
         var updatedConfig = self
