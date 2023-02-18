@@ -10,6 +10,8 @@ import UIKit
 struct compactConfiguration: UIContentConfiguration, Hashable {
     
     var name: String?
+    var quantity: Int?
+    var date: String?
     
     func makeContentView() -> UIView & UIContentView {
         return CompactCellView(configuration: self)!
@@ -28,6 +30,11 @@ struct compactConfiguration: UIContentConfiguration, Hashable {
 }
 
 struct regularConfiguration: UIContentConfiguration, Hashable {
+    
+    var name: String?
+    var quantity: Int?
+    var date: String?
+    
     func makeContentView() -> UIView & UIContentView {
         return RegularCellView(configuration: self)!
     }

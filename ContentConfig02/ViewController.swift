@@ -59,6 +59,8 @@ class ViewController: UIViewController {
         if self.traitCollection.horizontalSizeClass == .compact {
             let compactCellRegistration = UICollectionView.CellRegistration<compactWidthCell, Item> { (cell, IndexPath, item) in
                 cell.name = item.name
+                cell.quantity = item.quantity
+                cell.date = item.date
                 cell.layer.borderWidth = 0.5
                 cell.layer.borderColor = UIColor.red.cgColor
             }
@@ -66,17 +68,13 @@ class ViewController: UIViewController {
                 (collectionView: UICollectionView, indexPath: IndexPath, item: Item) -> UICollectionViewCell? in
                 return collectionView.dequeueConfiguredReusableCell(using: compactCellRegistration, for: indexPath, item: item)
             }
-            
-            let date = Date()
-            let currentDateTime = date.formatted(date: .numeric, time: .shortened)
-            let item1 = Item(name: "Item1", quantity: 1, date: currentDateTime, notes: "Item1 notes")
-            let item2 = Item(name: "item2", quantity: 1, date: currentDateTime, notes: "Item2 notes")
-            var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
-            snapshot.appendSections([.main])
-            snapshot.appendItems([item1,item2])
-            dataSource.apply(snapshot, animatingDifferences: false)
         } else if self.traitCollection.horizontalSizeClass == .regular {
             let regularCellRegistration = UICollectionView.CellRegistration<regularWidthCell, Item> { (cell, IndexPath, item) in
+                cell.name = item.name
+                cell.quantity = item.quantity
+                cell.date = item.date
+                cell.layer.borderWidth = 0.5
+                cell.layer.borderColor = UIColor.red.cgColor
             }
 
             dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView) {
@@ -88,7 +86,7 @@ class ViewController: UIViewController {
         let date = Date()
         let currentDateTime = date.formatted(date: .numeric, time: .shortened)
         let item1 = Item(name: "Item1", quantity: 1, date: currentDateTime, notes: "Item1 notes")
-        let item2 = Item(name: "item2", quantity: 1, date: currentDateTime, notes: "Item2 notes")
+        let item2 = Item(name: "item2", quantity: 2, date: currentDateTime, notes: "Item2 notes")
         var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
         snapshot.appendSections([.main])
         snapshot.appendItems([item1,item2])
@@ -104,6 +102,18 @@ class compactWidthCell: UICollectionViewCell {
         }
     }
     
+    var quantity: Int? {
+        didSet {
+            setNeedsUpdateConfiguration()
+        }
+    }
+    
+    var date: String? {
+        didSet {
+            setNeedsUpdateConfiguration()
+        }
+    }
+    
     override var configurationState: UICellConfigurationState {
         var state = super.configurationState
         return state
@@ -113,6 +123,8 @@ class compactWidthCell: UICollectionViewCell {
         
         var content = compactConfiguration().updated(for: state)
         content.name = name
+        content.quantity = quantity
+//        content.date = date
         contentConfiguration = content
     }
 }
@@ -125,9 +137,24 @@ class regularWidthCell: UICollectionViewCell {
         }
     }
     
+    var quantity: Int? {
+        didSet {
+            setNeedsUpdateConfiguration()
+        }
+    }
+    
+    var date: String? {
+        didSet {
+            setNeedsUpdateConfiguration()
+        }
+    }
+    
     override func updateConfiguration(using state: UICellConfigurationState) {
         
         var content = regularConfiguration().updated(for: state)
+        content.name = name
+        content.quantity = quantity
+//        content.date = date
         contentConfiguration = content
     }
     

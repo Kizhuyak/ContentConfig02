@@ -46,7 +46,6 @@ private extension CompactCellView {
     
     func loadNib() {
         
-//        let compactCellView = Bundle.main.loadNibNamed("\(CompactCellView.self)", owner: self)
         Bundle.main.loadNibNamed("\(CompactCellView.self)", owner: self)
         addSubview(containerView)
         containerView.translatesAutoresizingMaskIntoConstraints = false
@@ -62,12 +61,21 @@ private extension CompactCellView {
         
         currentConfiguration = configuration
         NameLabel.text = configuration.name
+        guard let quantity = configuration.quantity else {
+            return
+        }
+        QuantityLabel.text = String(describing: quantity)
+        DateUpdatedLabel.text = configuration.date
     }
 }
 
 class RegularCellView: UIView, UIContentView {
     
     @IBOutlet var containerView: UIView!
+    @IBOutlet var NameLabel: UILabel!
+    @IBOutlet var QuantityLabel: UILabel!
+    @IBOutlet var DateUpdatedLabel: UILabel!
+    
     private var currentConfiguration: regularConfiguration!
     
     var configuration: UIContentConfiguration {
@@ -98,7 +106,7 @@ private extension RegularCellView {
     
     func loadNib() {
         
-        let regularCellView = Bundle.main.loadNibNamed("\(RegularCellView.self)", owner: self)
+        Bundle.main.loadNibNamed("\(RegularCellView.self)", owner: self)
         addSubview(containerView)
         containerView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -112,5 +120,12 @@ private extension RegularCellView {
     func apply(configuration: regularConfiguration) {
         
         currentConfiguration = configuration
+        
+        NameLabel.text = configuration.name
+        guard let quantity = configuration.quantity else {
+            return
+        }
+        QuantityLabel.text = String(describing: quantity)
+        DateUpdatedLabel.text = configuration.date
     }
 }

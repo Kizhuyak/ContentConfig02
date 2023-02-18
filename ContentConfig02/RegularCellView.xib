@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -9,35 +10,56 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegularCellView" customModule="ContentConfig02" customModuleProvider="target">
             <connections>
-                <outlet property="containerView" destination="q9u-nZ-5pO" id="uIs-F5-PEl"/>
+                <outlet property="DateUpdatedLabel" destination="q0q-xw-NKt" id="jfR-sG-5gV"/>
+                <outlet property="NameLabel" destination="W6L-m6-L26" id="un2-1J-Bac"/>
+                <outlet property="QuantityLabel" destination="22P-Ne-3xO" id="2qC-TV-3FU"/>
+                <outlet property="containerView" destination="z6C-eI-Y7k" id="79S-ZM-aDA"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="q9u-nZ-5pO" userLabel="RegularView">
+        <view contentMode="scaleToFill" id="z6C-eI-Y7k" userLabel="RegularView">
             <rect key="frame" x="0.0" y="0.0" width="393" height="144"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hZ-bo-m2X">
-                    <rect key="frame" x="130" y="44" width="132" height="57"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6L-m6-L26" userLabel="Name">
+                    <rect key="frame" x="16.000000000000007" y="52" width="119.66666666666669" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22P-Ne-3xO" userLabel="Quantity">
+                    <rect key="frame" x="167.66666666666666" y="62.000000000000007" width="27.333333333333343" height="20.333333333333336"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0q-xw-NKt" userLabel="Date">
+                    <rect key="frame" x="240" y="52" width="36" height="41"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" systemColor="systemMintColor"/>
+            <color key="backgroundColor" systemColor="systemYellowColor"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="2hZ-bo-m2X" secondAttribute="bottom" priority="999" constant="43" id="KoB-k9-0hv"/>
-                <constraint firstAttribute="trailing" secondItem="2hZ-bo-m2X" secondAttribute="trailing" constant="131" id="acc-kp-PCs"/>
-                <constraint firstItem="2hZ-bo-m2X" firstAttribute="leading" secondItem="q9u-nZ-5pO" secondAttribute="leading" constant="130" id="eeP-t5-AH4"/>
-                <constraint firstItem="2hZ-bo-m2X" firstAttribute="top" secondItem="q9u-nZ-5pO" secondAttribute="top" constant="44" id="vw8-h2-Vmt"/>
+                <constraint firstAttribute="bottom" secondItem="22P-Ne-3xO" secondAttribute="bottom" priority="999" constant="61.666666666666671" id="9m7-EN-HD9"/>
+                <constraint firstAttribute="bottom" secondItem="W6L-m6-L26" secondAttribute="bottom" priority="999" constant="51" id="Grj-x6-Rhz"/>
+                <constraint firstItem="22P-Ne-3xO" firstAttribute="top" secondItem="z6C-eI-Y7k" secondAttribute="top" constant="62" id="JvR-ih-O5h"/>
+                <constraint firstItem="q0q-xw-NKt" firstAttribute="leading" secondItem="22P-Ne-3xO" secondAttribute="trailing" constant="45" id="Okz-2O-fzb"/>
+                <constraint firstAttribute="bottom" secondItem="q0q-xw-NKt" secondAttribute="bottom" priority="999" constant="51" id="P9L-zp-F7b"/>
+                <constraint firstAttribute="trailing" secondItem="q0q-xw-NKt" secondAttribute="trailing" constant="117" id="Xl5-YA-P83"/>
+                <constraint firstItem="q0q-xw-NKt" firstAttribute="top" secondItem="z6C-eI-Y7k" secondAttribute="top" constant="52" id="g58-fj-mPg"/>
+                <constraint firstItem="22P-Ne-3xO" firstAttribute="leading" secondItem="W6L-m6-L26" secondAttribute="trailing" constant="32" id="iLi-y2-l6W"/>
+                <constraint firstItem="W6L-m6-L26" firstAttribute="top" secondItem="z6C-eI-Y7k" secondAttribute="top" constant="52" id="lra-od-j6L"/>
+                <constraint firstItem="W6L-m6-L26" firstAttribute="leading" secondItem="z6C-eI-Y7k" secondAttribute="leading" constant="16" id="nA8-fq-1O8"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-164" y="-113"/>
+            <point key="canvasLocation" x="27" y="-322"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
