@@ -87,9 +87,10 @@ class ViewController: UIViewController {
         let currentDateTime = date.formatted(date: .numeric, time: .shortened)
         let item1 = Item(name: "Item1", quantity: 1, date: currentDateTime, notes: "Item1 notes")
         let item2 = Item(name: "item2", quantity: 2, date: currentDateTime, notes: "Item2 notes")
+        let item3 = Item(name: "Very very very long item name", quantity: 5, date: currentDateTime, notes: "Item 3 very long notes")
         var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
         snapshot.appendSections([.main])
-        snapshot.appendItems([item1,item2])
+        snapshot.appendItems([item1,item2, item3])
         dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
@@ -124,7 +125,7 @@ class compactWidthCell: UICollectionViewCell {
         var content = compactConfiguration().updated(for: state)
         content.name = name
         content.quantity = quantity
-//        content.date = date
+        content.date = date
         contentConfiguration = content
     }
 }
@@ -154,7 +155,7 @@ class regularWidthCell: UICollectionViewCell {
         var content = regularConfiguration().updated(for: state)
         content.name = name
         content.quantity = quantity
-//        content.date = date
+        content.date = date
         contentConfiguration = content
     }
     

@@ -21,37 +21,42 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="144"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6L-m6-L26" userLabel="Name">
-                    <rect key="frame" x="16.000000000000007" y="52" width="119.66666666666669" height="41"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22P-Ne-3xO" userLabel="Quantity">
-                    <rect key="frame" x="167.66666666666666" y="62.000000000000007" width="27.333333333333343" height="20.333333333333336"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0q-xw-NKt" userLabel="Date">
-                    <rect key="frame" x="240" y="52" width="36" height="41"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="UD3-W3-2wQ">
+                    <rect key="frame" x="16" y="12" width="327" height="120"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6L-m6-L26" userLabel="Name">
+                            <rect key="frame" x="0.0" y="0.0" width="45" height="120"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22P-Ne-3xO" userLabel="Quantity">
+                            <rect key="frame" x="83" y="0.0" width="27.333333333333329" height="120"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last updated:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1R-RC-8od" userLabel="Last updated">
+                            <rect key="frame" x="148.33333333333334" y="0.0" width="104.66666666666666" height="120"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0q-xw-NKt" userLabel="Date">
+                            <rect key="frame" x="291" y="0.0" width="36" height="120"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemYellowColor"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="22P-Ne-3xO" secondAttribute="bottom" priority="999" constant="61.666666666666671" id="9m7-EN-HD9"/>
-                <constraint firstAttribute="bottom" secondItem="W6L-m6-L26" secondAttribute="bottom" priority="999" constant="51" id="Grj-x6-Rhz"/>
-                <constraint firstItem="22P-Ne-3xO" firstAttribute="top" secondItem="z6C-eI-Y7k" secondAttribute="top" constant="62" id="JvR-ih-O5h"/>
-                <constraint firstItem="q0q-xw-NKt" firstAttribute="leading" secondItem="22P-Ne-3xO" secondAttribute="trailing" constant="45" id="Okz-2O-fzb"/>
-                <constraint firstAttribute="bottom" secondItem="q0q-xw-NKt" secondAttribute="bottom" priority="999" constant="51" id="P9L-zp-F7b"/>
-                <constraint firstAttribute="trailing" secondItem="q0q-xw-NKt" secondAttribute="trailing" constant="117" id="Xl5-YA-P83"/>
-                <constraint firstItem="q0q-xw-NKt" firstAttribute="top" secondItem="z6C-eI-Y7k" secondAttribute="top" constant="52" id="g58-fj-mPg"/>
-                <constraint firstItem="22P-Ne-3xO" firstAttribute="leading" secondItem="W6L-m6-L26" secondAttribute="trailing" constant="32" id="iLi-y2-l6W"/>
-                <constraint firstItem="W6L-m6-L26" firstAttribute="top" secondItem="z6C-eI-Y7k" secondAttribute="top" constant="52" id="lra-od-j6L"/>
-                <constraint firstItem="W6L-m6-L26" firstAttribute="leading" secondItem="z6C-eI-Y7k" secondAttribute="leading" constant="16" id="nA8-fq-1O8"/>
+                <constraint firstAttribute="trailing" secondItem="UD3-W3-2wQ" secondAttribute="trailing" constant="50" id="2NE-ru-lkk"/>
+                <constraint firstItem="UD3-W3-2wQ" firstAttribute="leading" secondItem="z6C-eI-Y7k" secondAttribute="leading" constant="16" id="K2n-Za-CCp"/>
+                <constraint firstAttribute="bottom" secondItem="UD3-W3-2wQ" secondAttribute="bottom" constant="12" id="p80-au-U8N"/>
+                <constraint firstItem="UD3-W3-2wQ" firstAttribute="top" secondItem="z6C-eI-Y7k" secondAttribute="top" constant="11.999999999999998" id="xHV-b6-e11"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="27" y="-322"/>
